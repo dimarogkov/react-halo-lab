@@ -1,0 +1,23 @@
+.cardsBottom {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+/*media*/
+@media(max-width: 1199px){
+    .cardsBottom {
+        margin-top: 40px;
+    }
+}
+@media(max-width: 767px){
+    .cardsBottom {
+        margin-top: 30px;
+    }
+}
+@media(max-width: 767px){
+    .cardsBottom {
+        margin-top: 20px;
+    }
+}

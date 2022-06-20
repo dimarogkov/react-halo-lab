@@ -3,6 +3,7 @@ import classes from './Cards.module.css';
 import axios from "axios";
 import Card from "../card/Card";
 import Popup from "../../ui/popup/Popup";
+import CardsBottom from "../cardsBottom/CardsBottom";
 
 const Cards = () => {
     const [cards, cardsSet] = useState([]);
@@ -62,9 +63,7 @@ const Cards = () => {
                     }
                 </div>
 
-                <div className={classes.cardsBottom}>
-                    <button className="active size-2" onClick={openCheapestCard}>cheapest</button>
-                </div>
+                <CardsBottom openCheapestCard={openCheapestCard} />
             </div>
         </>
     )
