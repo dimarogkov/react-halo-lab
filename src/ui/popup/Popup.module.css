@@ -1,0 +1,220 @@
+.popup {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.popupLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.popupContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: auto;
+    padding: 30px;
+}
+.layerClose {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.popupBlock {
+    position: relative;
+    display: inline-block;
+    width: 384px;
+    border-radius: 24px;
+    background-color: var(--color-white);
+    padding: 60px 30px;
+}
+.popupClose {
+    position: absolute;
+    top: -14px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.popupClose * {
+    font-size: 18px;
+    color: var(--color-black);
+    transition: color 0.3s;
+}
+.popupClose:active {
+    transform: translateY(3px);
+}
+.popupCont {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.category {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    margin-bottom: 8px;
+}
+.name {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    line-height: 1.3em;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.price {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 60px;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+}
+.price span {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+.form {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.inputBlock {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.inputBlock:last-child {
+    margin-bottom: 0;
+}
+.inputBlock input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    color: var(--color-black);
+    letter-spacing: -0.02em;
+    padding: 0 15px;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.inputBlock input:not(.invalid):focus {
+    border-color: var(--color-black);
+}
+.inputBlock input::placeholder {
+    color: var(--color-grey);
+}
+.inputBlock .invalid {
+    border-color: var(--color-red);
+}
+.inputBlock p {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    margin-top: 4px;
+    color: var(--color-red);
+}
+/*media*/
+@media(min-width: 1200px){
+    .popupClose:hover {
+        background-color: var(--color-green);
+    }
+    .popupClose:hover * {
+        color: var(--color-white);
+    }
+    .inputBlock input:not(.invalid):hover {
+        border-color: var(--color-black);
+    }
+}
+@media(max-width: 1199px){
+    .category {
+        font-size: 15px;
+    }
+    .name {
+        font-size: 34px;
+    }
+    .price {
+        font-size: 52px;
+    }
+    .price span {
+        font-size: 28px;
+    }
+}
+@media(max-width: 767px){
+    .name {
+        font-size: 30px;
+    }
+    .price {
+        font-size: 46px;
+    }
+    .price span {
+        font-size: 26px;
+    }
+}
+@media(max-width: 480px){
+    .popupBlock {
+        width: 100%;
+        padding: 20px;
+    }
+    .category {
+        font-size: 14px;
+    }
+    .name {
+        font-size: 26px;
+    }
+    .price {
+        font-size: 44px;
+    }
+    .price span {
+        font-size: 25px;
+    }
+    .inputBlock input {
+        height: 52px;
+    }
+}
